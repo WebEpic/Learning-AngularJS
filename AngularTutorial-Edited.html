@@ -5,7 +5,7 @@
 </head>
 <body data-ng-init="names=['John Smith', 'John Doe', 'Jane Doe']">
 	<div class="container">
-		Name: <input type="text" data-ng-model="name" /> {{ name }}
+		Name: <input type="text" data-ng-model="name" /> {{ name | uppercase }}
 	</div>
 	<p>
 	<ul>

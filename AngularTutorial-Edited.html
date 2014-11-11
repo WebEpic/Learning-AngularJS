@@ -3,13 +3,13 @@
 <head> 
 	<title>Using AngularJS Directives and Data Binding</title>
 </head>
-<body data-ng-init="customers=[{name:'John Smith',city:'Atlanta'}, {name:'John Doe',city:'San Francisco'}, {name:'Jane Doe', city:'San Francisco'}]">
+<body data-ng-init="customers=[{name:'John Smith',city:'Atlanta'}, {name:'John Doe',city:'San Francisco'}, {name:'Jane Doe', city:'Palo Alto'}]">
 	<div class="container">
 		Name: <input type="text" data-ng-model="name" />
 	</div>
 	<p>
 	<ul>
-		<li data-ng-repeat="cust in customers | filter: name">{{ cust.name }} - {{ cust.city }}</li>
+		<li data-ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city | uppercase }}</li>
 	</ul>
 	</p>
 
